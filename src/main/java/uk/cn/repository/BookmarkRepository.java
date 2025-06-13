@@ -1,10 +1,13 @@
 package uk.cn.repository;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import uk.cn.domain.Bookmark;
-
-import java.util.List;
+import uk.cn.dto.BookmarkDTO;
 
 public interface BookmarkRepository extends JpaRepository<Bookmark, Long> {
-    //public List<Bookmark> getBookmarkByPage(Integer pageNo);
+    //@Query("select new BookmarkDTO(b.id, b.title, b.url, b.createdAt) from Bookmark b")
+    //Page<BookmarkDTO> findBookmarks(Pageable pageable);
 }

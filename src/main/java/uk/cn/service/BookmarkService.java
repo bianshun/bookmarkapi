@@ -22,7 +22,6 @@ import java.awt.print.Book;
 public class BookmarkService {
 
     private final BookmarkRepository repository;
-    private final BookmarkMapper bookmarkMapper;
 
     @Transactional(readOnly = true)
     public BookmarksDTO getBookmarksByPage(Integer page){

@@ -11,3 +11,9 @@ Build up application image and run on docker
 * > http://localhost:9090/api?page=2
 
 # Build up project using Jib
+* Add Jib plugin
+* Run Docker
+* >mvn jib:build 
+  > mvn jib:dockerBuild (if local docker installed)
+  > mvn jib:build -Dimage=bianshun/bookmarkapi-jib-customname
+  > docker run -p 9090:8080 bianshun/bookmarkapi-jib-customname
